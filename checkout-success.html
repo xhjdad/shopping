@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>结算成功 - 个人商店App原型</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    .success-anim {
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .action-btn {
+      transition: background-color 0.3s ease, transform 0.1s ease;
+    }
+    .action-btn:active {
+      transform: scale(0.98);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 font-sans">
+  <header class="bg-white shadow p-4 flex items-center justify-between">
+    <a href="index.html" class="text-gray-500 hover:text-gray-700">
+      <i class="fa-solid fa-arrow-left text-2xl"></i>
+    </a>
+    <h1 class="text-xl font-bold text-gray-800 flex-grow text-center">结算成功</h1>
+    <div class="w-6"></div>
+  </header>
+  <main class="p-4 flex flex-col items-center justify-center min-h-[calc(100vh-120px)]">
+    <div class="bg-white rounded-xl shadow p-8 text-center max-w-sm w-full success-anim">
+      <i class="fa-solid fa-circle-check text-green-500 text-6xl mb-4"></i>
+      <h2 class="text-2xl font-bold text-gray-800 mb-3">支付成功！</h2>
+      <p class="text-gray-600 mb-6">您的订单已支付成功，感谢您的购买！</p>
+      <div class="bg-gray-50 rounded-lg p-4 mb-6 text-left">
+        <div class="flex justify-between mb-2">
+          <span class="text-gray-700">订单金额</span>
+          <span class="text-blue-600 font-bold">¥ 308.50</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-gray-700">订单编号</span>
+          <span class="text-gray-500">202406010001</span>
+        </div>
+      </div>
+      <div class="flex flex-col gap-3">
+        <a href="orders.html" class="w-full bg-green-500 text-white text-lg font-semibold py-3 rounded-xl shadow hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 action-btn">
+          <i class="fa-solid fa-list-check mr-2"></i> 查看订单
+        </a>
+        <a href="index.html" class="w-full bg-white border border-gray-300 text-gray-700 text-lg font-semibold py-3 rounded-xl shadow hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 action-btn">
+          <i class="fa-solid fa-house mr-2"></i> 返回首页
+        </a>
+      </div>
+    </div>
+  </main>
+  <footer class="text-center text-gray-400 text-xs py-4">
+    © 2024 个人商店App 原型
+  </footer>
+</body>
+</html>

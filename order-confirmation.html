@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>订单确认 - 个人商店App原型</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    /* 可以根据需要添加自定义样式 */
+    .action-button {
+      transition: background-color 0.3s ease, transform 0.1s ease;
+    }
+    .action-button:active {
+      transform: scale(0.98);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 font-sans">
+  <header class="bg-white shadow p-4 flex items-center justify-between">
+    <!-- 订单确认页通常没有返回按钮，防止用户返回购物车或结算页 -->
+    <div class="w-6"></div> <!-- 占位符 -->
+    <h1 class="text-xl font-bold text-gray-800 flex-grow text-center">订单确认</h1>
+    <div class="w-6"></div> <!-- 占位符 -->
+  </header>
+  <main class="p-4 flex flex-col items-center justify-center min-h-[calc(100vh-120px)]"> <!-- 调整高度以居中 -->
+    <div class="bg-white rounded-xl shadow p-8 text-center max-w-sm w-full">
+      <i class="fa-solid fa-check-circle text-green-500 text-6xl mb-4"></i>
+      <h2 class="text-2xl font-bold text-gray-800 mb-3">订单提交成功！</h2>
+      <p class="text-gray-600 mb-6">感谢您的购买，您的订单已成功提交。</p>
+      <div class="flex flex-col space-y-4">
+        <a href="orders.html" class="bg-blue-500 text-white text-lg font-semibold py-3 rounded-xl shadow hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 action-button">
+          查看我的订单
+        </a>
+        <a href="index.html" class="bg-gray-200 text-gray-800 text-lg font-semibold py-3 rounded-xl shadow hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-opacity-50 action-button"> <!-- Added link to index.html -->
+          返回首页
+        </a>
+      </div>
+    </div>
+  </main>
+  <footer class="text-center text-gray-400 text-xs py-4">
+    © 2024 个人商店App 原型
+  </footer>
+</body>
+</html>

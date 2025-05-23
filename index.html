@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>个人商店App原型</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    /* 优化交互卡片样式 */
+    .interactive-card {
+      transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.4s ease; /* 更平滑的过渡 */
+    }
+
+    .interactive-card:hover {
+      transform: translateY(-10px); /* 向上移动更多，增加悬浮感 */
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3); /* 更明显、更扩散、更深的阴影 */
+      background-color: #f9fafb; /* 悬停时背景轻微变色 */
+    }
+
+    .interactive-card:active {
+      transform: scale(0.97); /* 点击时轻微缩小 */
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* 点击时阴影变小 */
+      background-color: #f3f4f6; /* 点击时背景变色 */
+      transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out, background-color 0.15s ease; /* 点击效果更快 */
+    }
+
+    /* 移动端适配说明：Tailwind 的 grid-cols-2 在小屏幕上默认就是两列，无需额外 calc */
+    /* 如果需要更复杂的适配，可以使用 Tailwind 的响应式前缀，例如 sm:grid-cols-1 md:grid-cols-2 */
+
+  </style>
+</head>
+<body class="bg-gray-100 font-sans">
+  <header class="bg-white shadow p-4 flex items-center justify-between">
+    <h1 class="text-2xl font-bold text-gray-800">个人商店</h1>
+    <a href="profile.html" class="text-gray-500 hover:text-blue-500">
+      <i class="fa-solid fa-user text-2xl"></i>
+    </a>
+  </header>
+  <main class="p-6"> <!-- 增加主内容区域内边距 -->
+    <div class="grid grid-cols-2 gap-6"> <!-- 增加网格间距 -->
+      <!-- 商品浏览 -->
+      <a href="products.html" class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition flex flex-col items-center p-6 interactive-card"> <!-- 调整圆角、阴影和内边距 -->
+        <img src="./img/生成动漫图片 (1).png" alt="商品浏览" class="w-24 h-24 rounded-lg mb-2 object-cover">
+        <span class="text-xl font-semibold text-gray-800 mt-2">商品浏览</span> <!-- 调整字号和颜色 -->
+        <span class="text-gray-500 text-sm mt-1">发现并购买心仪商品</span> <!-- 调整颜色 -->
+      </a>
+      <!-- 购物车 -->
+      <a href="cart.html" class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition flex flex-col items-center p-6 interactive-card"> <!-- 调整圆角、阴影和内边距 -->
+        <i class="fa-solid fa-cart-shopping text-5xl text-blue-600 mb-2"></i> <!-- 调整图标颜色 -->
+        <span class="text-xl font-semibold text-gray-800 mt-2">购物车</span> <!-- 调整字号和颜色 -->
+        <span class="text-gray-500 text-sm mt-1">管理已选商品</span> <!-- 调整颜色 -->
+      </a>
+      <!-- 订单管理 -->
+      <a href="orders.html" class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition flex flex-col items-center p-6 interactive-card"> <!-- 调整圆角、阴影和内边距 -->
+        <i class="fa-solid fa-clipboard-list text-5xl text-green-600 mb-2"></i> <!-- 调整图标颜色 -->
+        <span class="text-xl font-semibold text-gray-800 mt-2">订单管理</span> <!-- 调整字号和颜色 -->
+        <span class="text-gray-500 text-sm mt-1">查看历史订单</span> <!-- 调整颜色 -->
+      </a>
+      <!-- 用户中心 -->
+      <a href="profile.html" class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition flex flex-col items-center p-6 interactive-card"> <!-- 调整圆角、阴影和内边距 -->
+        <i class="fa-solid fa-user-circle text-5xl text-purple-600 mb-2"></i> <!-- 调整图标颜色 -->
+        <span class="text-xl font-semibold text-gray-800 mt-2">用户中心</span> <!-- 调整字号和颜色 -->
+        <span class="text-gray-500 text-sm mt-1">个人信息与设置</span> <!-- 调整颜色 -->
+      </a>
+    </div>
+  </main>
+  <footer class="text-center text-gray-400 text-xs py-4">
+    © 2024 个人商店App 原型
+  </footer>
+</body>
+</html>

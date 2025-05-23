@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>结算 - 个人商店App原型</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    /* 可以根据需要添加自定义样式 */
+    .place-order-button {
+      transition: background-color 0.3s ease, transform 0.1s ease;
+    }
+    .place-order-button:active {
+      transform: scale(0.98);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 font-sans">
+  <header class="bg-white shadow p-4 flex items-center justify-between">
+    <a href="cart.html" class="text-gray-500 hover:text-gray-700">
+      <i class="fa-solid fa-arrow-left text-2xl"></i>
+    </a>
+    <h1 class="text-xl font-bold text-gray-800 flex-grow text-center">结算</h1>
+    <div class="w-6"></div> <!-- 占位符，保持标题居中 -->
+  </header>
+  <main class="p-4">
+    <!-- 收货地址 -->
+    <div class="bg-white rounded-xl shadow p-4 mb-4">
+      <div class="flex justify-between items-center mb-3">
+        <h2 class="text-lg font-bold text-gray-800">收货信息</h2>
+        <a href="address-management.html" class="text-blue-500 hover:underline text-sm">修改</a>
+      </div>
+      <div class="text-gray-700 text-sm space-y-1">
+        <p><span class="font-semibold">收件人姓名</span> 138****1234</p>
+        <p>广东省深圳市南山区科技园xxx街道xxx小区xxx栋xxx号</p>
+      </div>
+    </div>
+
+    <!-- 商品列表 (简略) -->
+    <div class="bg-white rounded-xl shadow p-4 mb-4">
+      <h2 class="text-lg font-bold text-gray-800 mb-3">商品列表</h2>
+      <div class="space-y-3">
+        <!-- 单个商品示例 -->
+        <div class="flex items-center">
+          <img src="./img/生成动漫图片 (1).png" alt="商品图片" class="w-12 h-12 rounded-md object-cover mr-3">
+          <div class="flex-grow">
+            <h3 class="text-sm font-semibold text-gray-800 truncate">结算商品名称 1</h3>
+            <p class="text-gray-600 text-xs mt-0.5">数量: 1</p>
+          </div>
+          <span class="text-blue-600 font-bold text-sm">¥ 99.00</span>
+        </div>
+        <!-- 另一个商品示例 -->
+         <div class="flex items-center">
+          <img src="./img/生成动漫图片 (2).png" alt="商品图片" class="w-12 h-12 rounded-md object-cover mr-3">
+          <div class="flex-grow">
+            <h3 class="text-sm font-semibold text-gray-800 truncate">结算商品名称 2</h3>
+            <p class="text-gray-600 text-xs mt-0.5">数量: 2</p>
+          </div>
+          <span class="text-blue-600 font-bold text-sm">¥ 199.50</span>
+        </div>
+        <!-- 更多商品... -->
+      </div>
+    </div>
+
+    <!-- 支付方式 -->
+    <div class="bg-white rounded-xl shadow p-4 mb-4">
+      <h2 class="text-lg font-bold text-gray-800 mb-3">支付方式</h2>
+      <div class="space-y-3">
+        <!-- 支付方式选项示例 -->
+        <label class="flex items-center justify-between p-3 border border-gray-200 rounded-md cursor-pointer hover:bg-gray-50">
+          <div class="flex items-center">
+            <input type="radio" name="payment-method" value="alipay" class="text-blue-600 focus:ring-blue-500">
+            <i class="fa-brands fa-alipay text-blue-500 text-xl ml-3 mr-2"></i>
+            <span class="text-gray-700 font-semibold">支付宝</span>
+          </div>
+          <!-- <i class="fa-solid fa-check text-blue-600"></i> 选中时显示 -->
+        </label>
+         <label class="flex items-center justify-between p-3 border border-gray-200 rounded-md cursor-pointer hover:bg-gray-50">
+          <div class="flex items-center">
+            <input type="radio" name="payment-method" value="wechatpay" class="text-green-600 focus:ring-green-500">
+             <i class="fa-brands fa-weixin text-green-500 text-xl ml-3 mr-2"></i>
+            <span class="text-gray-700 font-semibold">微信支付</span>
+          </div>
+           <!-- <i class="fa-solid fa-check text-green-600 hidden"></i> 选中时显示 -->
+        </label>
+        <!-- 更多支付方式... -->
+      </div>
+    </div>
+
+    <!-- 费用明细 -->
+    <div class="bg-white rounded-xl shadow p-4 mb-6">
+      <h2 class="text-lg font-bold text-gray-800 mb-3">费用明细</h2>
+      <div class="text-gray-700 text-sm space-y-2">
+        <div class="flex justify-between">
+          <span>商品总额:</span>
+          <span class="text-gray-800 font-semibold">¥ 298.50</span>
+        </div>
+        <div class="flex justify-between">
+          <span>运费:</span>
+          <span class="text-gray-800 font-semibold">¥ 10.00</span>
+        </div>
+        <div class="flex justify-between font-bold text-base pt-2 border-t border-gray-200">
+          <span>订单总额:</span>
+          <span class="text-blue-600">¥ 308.50</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 底部结算栏 -->
+    <div class="flex justify-end mt-6">
+      <a href="checkout-success.html" class="place-order-button bg-green-500 text-white px-6 py-3 rounded-xl text-lg font-semibold shadow hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 flex items-center">
+        <i class="fa-solid fa-check mr-2"></i> 提交订单并支付
+      </a>
+    </div>
+  </main>
+  <footer class="text-center text-gray-400 text-xs py-4">
+    © 2024 个人商店App 原型
+  </footer>
+</body>
+</html>

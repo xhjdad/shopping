@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>地址管理 - 个人商店App原型</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    /* 可以根据需要添加自定义样式 */
+    .address-card {
+      transition: box-shadow 0.2s ease-in-out;
+    }
+    .address-card:hover {
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+    }
+    .add-address-button {
+      transition: background-color 0.3s ease, transform 0.1s ease;
+    }
+    .add-address-button:active {
+      transform: scale(0.98);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 font-sans">
+  <header class="bg-white shadow p-4 flex items-center justify-between">
+    <a href="profile.html" class="text-gray-500 hover:text-gray-700">
+      <i class="fa-solid fa-arrow-left text-2xl"></i>
+    </a>
+    <h1 class="text-xl font-bold text-gray-800 flex-grow text-center">地址管理</h1>
+    <div class="w-6"></div> <!-- 占位符，保持标题居中 -->
+  </header>
+  <main class="p-4">
+    <div class="space-y-4">
+      <!-- 地址列表 -->
+
+      <!-- 单个地址示例 (默认地址) -->
+      <div class="bg-white rounded-xl shadow p-4 address-card">
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-base font-semibold text-gray-800">收件人姓名</span>
+          <span class="text-sm text-gray-600">138****1234</span>
+        </div>
+        <p class="text-gray-700 text-sm mb-3">
+          [默认] 广东省深圳市南山区科技园xxx街道xxx小区xxx栋xxx号
+        </p>
+        <div class="flex justify-end space-x-3 text-sm">
+          <button class="text-blue-500 hover:underline">编辑</button>
+          <button class="text-red-500 hover:underline">删除</button>
+        </div>
+      </div>
+
+      <!-- 另一个地址示例 -->
+      <div class="bg-white rounded-xl shadow p-4 address-card">
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-base font-semibold text-gray-800">收件人姓名 2</span>
+          <span class="text-sm text-gray-600">139****5678</span>
+        </div>
+        <p class="text-gray-700 text-sm mb-3">
+          广东省广州市天河区xxx街道xxx小区xxx栋xxx号
+        </p>
+        <div class="flex justify-end space-x-3 text-sm">
+          <button class="text-blue-500 hover:underline">编辑</button>
+          <button class="text-red-500 hover:underline">删除</button>
+        </div>
+      </div>
+      <!-- 更多地址示例... -->
+    </div>
+
+    <a href="add-edit-address.html" class="block w-full bg-blue-500 text-white text-lg font-semibold py-3 rounded-xl shadow hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 mt-6 text-center add-address-button"> <!-- Changed button to a, added link to add-edit-address.html -->
+      <i class="fa-solid fa-plus mr-2"></i> 添加新地址
+    </a>
+
+  </main>
+  <footer class="text-center text-gray-400 text-xs py-4">
+    © 2024 个人商店App 原型
+  </footer>
+</body>
+</html>

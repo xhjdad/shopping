@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>待发货订单详情 - 个人商店App原型</title> <!-- 修改标题 -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    /* 可以根据需要添加自定义样式 */
+  </style>
+</head>
+<body class="bg-gray-100 font-sans">
+  <header class="bg-white shadow p-4 flex items-center justify-between">
+    <a href="orders.html" class="text-gray-500 hover:text-gray-700">
+      <i class="fa-solid fa-arrow-left text-2xl"></i>
+    </a>
+    <h1 class="text-xl font-bold text-gray-800 flex-grow text-center">订单详情</h1>
+    <div class="w-6"></div> <!-- 占位符，保持标题居中 -->
+  </header>
+  <main class="p-4">
+    <!-- 订单状态 -->
+    <div class="bg-white rounded-xl shadow p-4 mb-4">
+      <div class="flex items-center mb-2">
+        <i class="fa-solid fa-box text-blue-500 text-xl mr-2"></i> <!-- 修改图标和颜色 -->
+        <span class="text-lg font-bold text-blue-600">待发货</span> <!-- 修改订单状态文本 -->
+      </div>
+      <p class="text-gray-600 text-sm">您的订单已付款，等待商家发货。</p> <!-- 修改状态描述 -->
+    </div>
+
+    <!-- 订单信息 -->
+    <div class="bg-white rounded-xl shadow p-4 mb-4">
+      <h2 class="text-lg font-bold text-gray-800 mb-3">订单信息</h2>
+      <div class="text-gray-700 text-sm space-y-2">
+        <div class="flex justify-between">
+          <span>订单号:</span>
+          <span class="text-gray-800 font-semibold">20240725987654321</span> <!-- 示例订单号 -->
+        </div>
+        <div class="flex justify-between">
+          <span>下单时间:</span>
+          <span class="text-gray-800 font-semibold">2024-07-25 10:30</span> <!-- 示例时间 -->
+        </div>
+        <div class="flex justify-between">
+          <span>支付方式:</span>
+          <span class="text-gray-800 font-semibold">在线支付</span> <!-- 示例支付方式 -->
+        </div>
+      </div>
+    </div>
+
+    <!-- 收货信息 -->
+    <div class="bg-white rounded-xl shadow p-4 mb-4">
+      <h2 class="text-lg font-bold text-gray-800 mb-3">收货信息</h2>
+      <div class="text-gray-700 text-sm space-y-1">
+        <p><span class="font-semibold">收件人:</span> 示例收件人 (138****1234)</p> <!-- 示例收件人信息 -->
+        <p><span class="font-semibold">收货地址:</span> 示例省份示例城市示例区示例街道示例详细地址</p> <!-- 示例收货地址 -->
+      </div>
+    </div>
+
+    <!-- 商品列表 -->
+    <div class="bg-white rounded-xl shadow p-4 mb-4">
+      <h2 class="text-lg font-bold text-gray-800 mb-3">商品列表</h2>
+      <!-- 单个商品示例 -->
+      <div class="flex items-center mb-3 pb-3 border-b border-gray-200 last:border-b-0 last:pb-0">
+        <img src="./img/生成动漫图片 (1).png" alt="商品图片" class="w-16 h-16 object-cover rounded-lg mr-4"> <!-- 示例商品图片 -->
+        <div class="flex-grow">
+          <h3 class="text-base font-semibold text-gray-800">另一件商品示例</h3> <!-- 示例商品名称 -->
+          <p class="text-gray-600 text-sm">规格: 类型</p> <!-- 示例规格 -->
+          <div class="flex justify-between items-center mt-1">
+            <p class="text-red-500 font-bold">¥120.00</p> <!-- 示例商品价格 -->
+            <span class="text-gray-500 text-sm">x 1</span> <!-- 示例商品数量 -->
+          </div>
+        </div>
+      </div>
+      <!-- 可以根据需要添加更多商品 -->
+    </div>
+
+    <!-- 费用明细 -->
+    <div class="bg-white rounded-xl shadow p-4 mb-4">
+      <h2 class="text-lg font-bold text-gray-800 mb-3">费用明细</h2>
+      <div class="text-gray-700 text-sm space-y-2">
+        <div class="flex justify-between">
+          <span>商品总额:</span>
+          <span class="text-gray-800 font-semibold">¥ 120.00</span> <!-- 示例商品总额 -->
+        </div>
+        <div class="flex justify-between">
+          <span>运费:</span>
+          <span class="text-gray-800 font-semibold">¥ 0.00</span> <!-- 示例运费 -->
+        </div>
+        <div class="flex justify-between font-bold text-base pt-2 border-t border-gray-200">
+          <span>实付金额:</span>
+          <span class="text-blue-600">¥ 120.00</span> <!-- 示例实付金额 -->
+        </div>
+      </div>
+    </div>
+
+    <!-- 订单操作按钮 (待发货状态) -->
+    <div class="flex justify-around mt-6 space-x-4">
+      <button class="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-100">联系客服</button>
+      <button class="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-100">提醒发货</button>
+      <button onclick="openCancelModal()" class="flex-1 px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition">取消订单</button>
+    </div>
+  </main>
+  <footer class="text-center text-gray-400 text-xs py-4">
+    © 2024 个人商店App 原型
+  </footer>
+
+  <!-- 订单取消自定义弹窗 -->
+  <div id="cancelModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40 hidden">
+    <div class="bg-white rounded-2xl shadow-2xl p-8 w-80 text-center animate-fadeIn">
+      <div class="mb-4">
+        <i class="fa-solid fa-circle-exclamation text-yellow-400 text-3xl mb-2"></i>
+        <h2 class="text-lg font-bold text-gray-800 mb-2">确认要取消订单吗？</h2>
+        <p class="text-gray-500 text-sm">订单取消后将无法恢复，确定继续操作吗？</p>
+      </div>
+      <div class="flex justify-between mt-6">
+        <button onclick="closeCancelModal()" class="px-6 py-2 rounded-lg bg-gray-200 text-gray-700 hover:bg-gray-300 transition">再想想</button>
+        <button onclick="confirmCancelOrder()" class="px-6 py-2 rounded-lg bg-red-500 text-white hover:bg-red-600 transition">确定取消</button>
+      </div>
+    </div>
+  </div>
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .animate-fadeIn {
+      animation: fadeIn 0.3s;
+    }
+  </style>
+  <script>
+    function openCancelModal() {
+      document.getElementById('cancelModal').classList.remove('hidden');
+    }
+    function closeCancelModal() {
+      document.getElementById('cancelModal').classList.add('hidden');
+    }
+    function confirmCancelOrder() {
+      closeCancelModal();
+      // 这里写取消订单的实际逻辑
+      alert('订单已取消');
+    }
+  </script>
+</body>
+</html>

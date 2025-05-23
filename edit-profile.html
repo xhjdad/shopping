@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>编辑个人资料 - 个人商店App原型</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    /* 可以根据需要添加自定义样式 */
+    .save-button {
+      transition: background-color 0.3s ease, transform 0.1s ease;
+    }
+    .save-button:active {
+      transform: scale(0.98);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 font-sans">
+  <header class="bg-white shadow p-4 flex items-center justify-between">
+    <a href="profile.html" class="text-gray-500 hover:text-gray-700">
+      <i class="fa-solid fa-arrow-left text-2xl"></i>
+    </a>
+    <h1 class="text-xl font-bold text-gray-800 flex-grow text-center">编辑资料</h1>
+    <div class="w-6"></div> <!-- 占位符，保持标题居中 -->
+  </header>
+  <main class="p-4">
+    <div class="bg-white rounded-xl shadow p-6">
+      <form>
+        <!-- 头像上传 (示例) -->
+        <div class="flex flex-col items-center mb-6">
+          <img src="./img/生成动漫图片 (1).png" alt="用户头像" class="w-24 h-24 rounded-full object-cover mb-3 border-2 border-blue-400">
+          <button type="button" class="text-blue-500 hover:underline text-sm">更换头像</button>
+        </div>
+
+        <!-- 昵称 -->
+        <div class="mb-4">
+          <label for="nickname" class="block text-gray-700 font-semibold mb-2">昵称</label>
+          <input type="text" id="nickname" name="nickname" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500" value="用户昵称示例">
+        </div>
+
+        <!-- 手机号 (通常不可编辑或需要验证) -->
+        <div class="mb-4">
+          <label for="phone" class="block text-gray-700 font-semibold mb-2">手机号</label>
+          <input type="tel" id="phone" name="phone" class="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-100 cursor-not-allowed" value="138****1234" readonly>
+        </div>
+
+        <!-- 邮箱 -->
+        <div class="mb-6">
+          <label for="email" class="block text-gray-700 font-semibold mb-2">邮箱</label>
+          <input type="email" id="email" name="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500" value="user.example@email.com">
+        </div>
+
+        <!-- 保存按钮 -->
+        <button type="submit" class="w-full bg-blue-500 text-white text-lg font-semibold py-3 rounded-xl shadow hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 save-button">
+          保存修改
+        </button>
+      </form>
+    </div>
+  </main>
+  <footer class="text-center text-gray-400 text-xs py-4">
+    © 2024 个人商店App 原型
+  </footer>
+</body>
+</html>

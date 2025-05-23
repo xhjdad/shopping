@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>商品浏览 - 个人商店App原型</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    /* 可以根据需要添加自定义样式 */
+    .product-card {
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 font-sans">
+  <header class="bg-white shadow p-4 flex items-center justify-between">
+    <a href="index.html" class="text-gray-500 hover:text-gray-700">
+      <i class="fa-solid fa-arrow-left text-2xl"></i>
+    </a>
+    <h1 class="text-xl font-bold text-gray-800 flex-grow text-center">商品列表</h1>
+    <div class="flex items-center space-x-4"> <!-- Wrap icons in a div -->
+      <button class="text-gray-500 hover:text-blue-500">
+        <i class="fa-solid fa-search text-2xl"></i>
+      </button>
+      <a href="cart.html" class="text-gray-500 hover:text-blue-500"> <!-- Added Cart link -->
+        <i class="fa-solid fa-cart-shopping text-2xl"></i>
+      </a>
+    </div>
+  </header>
+  <main class="p-4">
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <!-- 商品列表 -->
+
+      <!-- 单个商品卡片示例 1 -->
+      <a href="product-detail-1.html" class="bg-white rounded-xl shadow overflow-hidden product-card hover:shadow-lg border border-blue-200">
+        <img src="./img/生成动漫图片 (1).png" alt="商品图片" class="w-full h-40 object-cover">
+        <div class="p-3">
+          <h2 class="text-sm font-semibold text-gray-800 truncate">精美商品 1</h2>
+          <p class="text-blue-600 font-bold mt-1">¥ 99.90</p>
+        </div>
+      </a>
+
+      <!-- 单个商品卡片示例 2 -->
+      <a href="product-detail-2.html" class="bg-white rounded-xl shadow overflow-hidden product-card hover:shadow-lg bg-yellow-50 border-l-4 border-yellow-400"> {{ code }}
+        <img src="./img/生成动漫图片 (2).png" alt="商品图片" class="w-full h-40 object-cover">
+        <div class="p-3">
+          <h2 class="text-sm font-semibold text-gray-800 truncate">特色商品 2</h2>
+          <p class="text-red-500 font-bold mt-1">¥ 150.00</p>
+        </div>
+      </a>
+
+      <!-- 单个商品卡片示例 3 -->
+      <a href="product-detail-3.html" class="bg-white rounded-xl shadow overflow-hidden product-card hover:shadow-lg border-l-4 border-green-500 bg-green-50">
+        <img src="./img/生成动漫图片 (2).png" alt="商品图片" class="w-full h-40 object-cover">
+        <div class="p-3">
+          <h2 class="text-sm font-semibold text-gray-800 truncate">优质商品 3</h2>
+          <p class="text-green-600 font-bold mt-1">¥ 75.00</p>
+        </div>
+      </a>
+
+      <!-- 单个商品卡片示例 4 -->
+      <a href="product-detail-4.html" class="bg-white rounded-xl shadow overflow-hidden product-card hover:shadow-lg bg-purple-50 border-r-4 border-purple-400">
+        <img src="./img/生成动漫图片 (1).png" alt="商品图片" class="w-full h-40 object-cover">
+        <div class="p-3">
+          <h2 class="text-sm font-semibold text-gray-800 truncate">时尚商品 4</h2>
+          <p class="text-purple-600 font-bold mt-1">¥ 220.00</p>
+        </div>
+      </a>
+
+      <!-- 单个商品卡片示例 5 -->
+      <a href="product-detail-5.html" class="bg-white rounded-xl shadow overflow-hidden product-card hover:shadow-lg border-t-4 border-red-500 bg-red-50">
+        <img src="./img/生成动漫图片 (1).png" alt="商品图片" class="w-full h-40 object-cover">
+        <div class="p-3">
+          <h2 class="text-sm font-semibold text-gray-800 truncate">热门商品 5</h2>
+          <p class="text-orange-600 font-bold mt-1">¥ 180.00</p>
+        </div>
+      </a>
+
+      <!-- 单个商品卡片示例 6 -->
+      <a href="product-detail-6.html" class="bg-white rounded-xl shadow overflow-hidden product-card hover:shadow-lg bg-blue-50 border-b-4 border-blue-400">
+        <img src="./img/生成动漫图片 (2).png" alt="商品图片" class="w-full h-40 object-cover">
+        <div class="p-3">
+          <h2 class="text-sm font-semibold text-gray-800 truncate">新品商品 6</h2>
+          <p class="text-teal-600 font-bold mt-1">¥ 90.00</p>
+        </div>
+      </a>
+
+      <!-- 单个商品卡片示例 7 -->
+      <a href="product-detail-7.html" class="bg-white rounded-xl shadow overflow-hidden product-card hover:shadow-lg border-r-4 border-yellow-500 bg-yellow-100">
+        <img src="./img/生成动漫图片 (1).png" alt="商品图片" class="w-full h-40 object-cover">
+        <div class="p-3">
+          <h2 class="text-sm font-semibold text-gray-800 truncate">美味零食</h2>
+          <p class="text-blue-600 font-bold mt-1">¥ 35.50</p>
+        </div>
+      </a>
+
+      <!-- 单个商品卡片示例 8 -->
+      <a href="product-detail-8.html" class="bg-white rounded-xl shadow overflow-hidden product-card hover:shadow-lg bg-green-50 border-t-4 border-green-400">
+        <img src="./img/生成动漫图片 (2).png" alt="商品图片" class="w-full h-40 object-cover">
+        <div class="p-3">
+          <h2 class="text-sm font-semibold text-gray-800 truncate">儿童玩具</h2>
+          <p class="text-blue-600 font-bold mt-1">¥ 120.00</p>
+        </div>
+      </a>
+    </div>
+  </main>
+  <footer class="text-center text-gray-400 text-xs py-4">
+    © 2024 个人商店App 原型
+  </footer>
+</body>
+</html>

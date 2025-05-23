@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>购物车 - 个人商店App原型</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    /* 可以根据需要添加自定义样式 */
+    .cart-item {
+      transition: box-shadow 0.2s ease-in-out;
+    }
+    .cart-item:hover {
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+    }
+    .checkout-btn {
+      transition: background-color 0.3s ease, transform 0.1s ease;
+    }
+    .checkout-btn:active {
+      transform: scale(0.98);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 font-sans">
+  <header class="bg-white shadow p-4 flex items-center justify-between">
+    <a href="index.html" class="text-gray-500 hover:text-gray-700">
+      <i class="fa-solid fa-arrow-left text-2xl"></i>
+    </a>
+    <h1 class="text-xl font-bold text-gray-800 flex-grow text-center">购物车</h1>
+    <div class="w-6"></div> <!-- 占位符，保持标题居中 -->
+  </header>
+  <main class="p-4">
+    <div class="space-y-4">
+      <!-- 购物车商品列表 -->
+
+      <!-- 单个购物车商品示例 -->
+      <div class="bg-white rounded-xl shadow p-4 flex items-center cart-item">
+        <img src="./img/生成动漫图片 (2).png" alt="商品图片" class="w-20 h-20 object-cover rounded-lg mr-4">
+        <div class="flex-grow">
+          <h3 class="text-base font-semibold text-gray-800 mb-1">商品名称</h3>
+          <h2 class="text-base font-semibold text-gray-800 truncate">购物车商品名称 1</h2>
+          <p class="text-blue-600 font-bold mt-1">¥ 99.00</p>
+          <div class="flex items-center mt-2">
+            <span class="text-gray-600 mr-2">数量:</span>
+            <div class="flex items-center border border-gray-300 rounded-md">
+              <button class="px-2 py-0.5 text-gray-600 hover:bg-gray-200 rounded-l-md">-</button>
+              <span class="px-3 py-0.5 border-l border-r border-gray-300 text-sm">1</span>
+              <button class="px-2 py-0.5 text-gray-600 hover:bg-gray-200 rounded-r-md">+</button>
+            </div>
+          </div>
+        </div>
+        <button class="text-gray-400 hover:text-red-500 ml-4">
+          <i class="fa-solid fa-trash text-xl"></i> <!-- 删除图标 -->
+        </button>
+      </div>
+
+      <!-- 复制更多商品示例 -->
+       <div class="bg-white rounded-xl shadow p-4 flex items-center cart-item">
+        <img src="./img/生成动漫图片 (1).png" alt="商品图片" class="w-20 h-20 rounded-lg object-cover mr-4">
+        <div class="flex-grow">
+          <h2 class="text-base font-semibold text-gray-800 truncate">购物车商品名称 2</h2>
+          <p class="text-blue-600 font-bold mt-1">¥ 199.50</p>
+          <div class="flex items-center mt-2">
+            <span class="text-gray-600 mr-2">数量:</span>
+            <div class="flex items-center border border-gray-300 rounded-md">
+              <button class="px-2 py-0.5 text-gray-600 hover:bg-gray-200 rounded-l-md">-</button>
+              <span class="px-3 py-0.5 border-l border-r border-gray-300 text-sm">2</span>
+              <button class="px-2 py-0.5 text-gray-600 hover:bg-gray-200 rounded-r-md">+</button>
+            </div>
+          </div>
+        </div>
+        <button class="text-gray-400 hover:text-red-500 ml-4">
+          <i class="fa-solid fa-trash text-xl"></i> <!-- 删除图标 -->
+        </button>
+      </div>
+      <!-- 更多商品... -->
+
+    </div>
+
+    <!-- 购物车总计区域 -->
+    <div class="bg-white rounded-xl shadow p-4 mt-6">
+      <div class="flex justify-between items-center mb-2">
+        <span class="text-lg font-semibold text-gray-700">商品总计:</span>
+        <span class="text-lg font-bold text-gray-800">¥ 298.50</span> <!-- 示例总价 -->
+      </div>
+      <div class="flex justify-between items-center mb-4">
+        <span class="text-lg font-semibold text-gray-700">运费:</span>
+        <span class="text-lg font-bold text-gray-800">¥ 10.00</span> <!-- 示例运费 -->
+      </div>
+      <div class="border-t border-gray-200 pt-4 flex justify-between items-center">
+        <span class="text-xl font-bold text-gray-800">订单总额:</span>
+        <span class="text-xl font-bold text-blue-600">¥ 308.50</span> <!-- 示例订单总额 -->
+      </div>
+    </div>
+
+    <!-- 结算按钮区域 -->
+    <div class="flex justify-end mt-6">
+      <a href="checkout.html" class="checkout-btn bg-blue-500 text-white px-6 py-3 rounded-xl text-lg font-semibold shadow hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 flex items-center">
+        <i class="fa-solid fa-credit-card mr-2"></i> 去结算
+      </a>
+    </div>
+  </main>
+  <footer class="text-center text-gray-400 text-xs py-4">
+    © 2024 个人商店App 原型
+  </footer>
+</body>
+</html>
